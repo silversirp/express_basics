@@ -1,5 +1,7 @@
 let express = require('express');
 const app = express();
+// add public directory
+app.use(express.static('public'));
 
 app.get('/user/:username', (req, res)=> {
     let user = req.params.username;
